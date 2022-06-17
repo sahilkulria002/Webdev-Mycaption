@@ -13,10 +13,7 @@
 }
 
 /* nav {
-    display: flex;
     padding: 2% 6%;
-    justify-content:space-between ;
-    align-items: center;
 } */
 .top_links {
     display: flex;
@@ -24,6 +21,7 @@
     justify-content:space-between ;
     align-items: center;
     background-image: linear-gradient(rgba(255,0,0,0.3),rgba(255,0,0,0.3));
+    transition: 1s;
 }
 
 .left_links{
@@ -105,42 +103,29 @@
     transition: 1s;
 }
 
+nav .fa {
+    display: none;
+}
+
 @media(max-width:700px) {
     .text_box h1 {
         font-size: 20px;
     }
     .top_links {
-        display: block;
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* align-items: flex-start; */
-        /* flex-wrap: wrap; */
-        /* align-content: space-between; */
-        
+        display: block;        
     }
-    /* .left_links ul li{
-        display: block;
-    } */
-    /* .right_links{
-        position: absolute;
-        background: blueviolet;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0; 
-        text-align: left;
-        z-index: 2;
-    } */
     .top_links{
+        padding: 30px;
         position: absolute;
         background: blueviolet;
         /* height: 100vh; */
         width: 200px;
         top: 0;
-        right: 0;
+        right: -280px;
         text-align: left;
         z-index: 2;
         line-height: 50px;
+        transition: 1s;
     }
     .top_links div ul li{
         display: block;
@@ -148,5 +133,64 @@
     .top_links div{
         text-align: left;
     }
+    nav .fa-times-circle {
+        display: block;
+        color : #fff;
+        margin : 10px ;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav {
+        padding: 30px 10%;
+        background-image: linear-gradient(rgba(255,0,0,0.3),rgba(255,0,0,0.3));
+    }
+    nav .fa-bars {
+        display: block;
+        text-align: end;
+    }
     
+}
+.courses {
+    width: 80%;
+    padding: 100px 0px 50px 0px;
+    margin: auto;
+    text-align: center;
+}
+h1{
+    font-size: 36p;
+    font-weight: 600;
+}
+p{
+    color: gray;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    
+}
+
+.course_col {
+    flex-basis: 31%;
+    background: greenyellow;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    margin: 10px 0px;
+}
+.course_col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
 }
