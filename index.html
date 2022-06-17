@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prototype</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
 </head>
 <body>
     <section class="header">
-        <nav>
-            <div class="top_links">
-            <div class="left_links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">About Us</a></li>
-                </ul>
-            </div>
-            <div class="right_links">
+        <nav onclick="showmenu">
+            <div class="top_links" id="tp_links" >
+                <i class="fa fa-times-circle" onclick="hidemenu" ></i>
+                <div class="left_links">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="right_links">
+
                 <ul>
                     <li><a href="">Login</a></li>
                     <li><a href="">Register</a></li>
                 </ul>
             </div>
-            </div>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu"></i>
         </nav>
         <div class="text_box">
             <h1>The cutest things in the world</h1>
@@ -35,6 +39,43 @@
         </div>
     </section>
 
+<!-- Section 2 for courses -->
+
+<section class="courses">
+    <h1>Courses we offer</h1>
+    <p>These are the best courses in India offered till present</p>
+
+    <div class="row">
+        <div class="course_col">
+            <h3>Programming</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum repellendus laudantium soluta maxime velit repellat ea neque suscipit tempora commodi illo, eos itaque error numquam voluptas expedita possimus ipsum?</p>
+        </div>
+        <div class="course_col">
+            <h3>Machine Learning</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum repellendus laudantium soluta maxime velit repellat ea neque suscipit tempora commodi illo, eos itaque error numquam voluptas expedita possimus ipsum?</p>
+        </div>
+        <div class="course_col">
+            <h3>Korean Dramas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum repellendus laudantium soluta maxime velit repellat ea neque suscipit tempora commodi illo, eos itaque error numquam voluptas expedita possimus ipsum?</p>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+<script>
+    var navlinks = document.getElementById('tp_links')
+    function showmenu() {
+        navlinks.style.right = '0'
+    }
+    function hidemenu() {
+        navlinks.style.right = '-250px'
+    }
+</script>
 
 </body>
 </html> 
